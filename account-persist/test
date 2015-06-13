@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<account-persist>
+  <accounts>
+	<account>
+		<id>a</id>
+		<name>b</name>
+		<email>c</email>
+		<password>d</password>
+		<activated>e</activated>
+	</account>
+  </accounts>
+</account-persist>
