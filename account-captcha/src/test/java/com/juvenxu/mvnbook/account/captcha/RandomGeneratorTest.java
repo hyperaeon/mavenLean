@@ -1,38 +1,25 @@
 package com.juvenxu.mvnbook.account.captcha;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertFalse;
+
 
 /**
  * Unit test for simple App.
  */
 public class RandomGeneratorTest 
-    extends TestCase
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public RandomGeneratorTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( RandomGeneratorTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+	@Test
+	public void testGetRandomString() throws Exception {
+		Set<String> randoms = new HashSet<>(100);
+		for (int i = 0; i < 100; i++) {
+			String random = RandomGenerator.getRandomString();
+			assertFalse(randoms.contains(random));
+			randoms.add(random);
+		}
+	}
 }
