@@ -1,5 +1,7 @@
 package com.juvenxu.mvnbook.account.service;
 
+import com.juvenxu.mvnbook.account.captcha.AccountCaptchaException;
+
 public class AccountServiceException extends Exception {
 
 	/**
@@ -9,5 +11,9 @@ public class AccountServiceException extends Exception {
 
 	public AccountServiceException(String message) {
 		super(message);
+	}
+
+	public AccountServiceException(String message, Exception e) {
+		super(message, e);
 	}
 }
