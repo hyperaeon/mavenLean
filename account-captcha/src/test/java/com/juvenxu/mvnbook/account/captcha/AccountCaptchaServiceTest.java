@@ -15,6 +15,9 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 
+import com.juvenxu.mvnbook.account.captcha.AccountCaptchaService;
+
+
 public class AccountCaptchaServiceTest {
 
 	private AccountCaptchaService service;
@@ -49,7 +52,7 @@ public class AccountCaptchaServiceTest {
 	
 	@Test
 	public void testValidateCaptchaCorrect() throws Exception {
-		List<String> preDefinedTexts = new ArrayList<>();
+		List<String> preDefinedTexts = new ArrayList<String>();
 		preDefinedTexts.add("12345");
 		preDefinedTexts.add("abcde");
 		service.setPreDefinedTexts(preDefinedTexts);
@@ -65,7 +68,7 @@ public class AccountCaptchaServiceTest {
 	
 	@Test
 	public void testValidatCaptchaIncorrect() throws Exception {
-		List<String> preDefinedTexts = new ArrayList<>();
+		List<String> preDefinedTexts = new ArrayList<String>();
 		preDefinedTexts.add("12345");
 		service.setPreDefinedTexts(preDefinedTexts);
 		
